@@ -1,6 +1,5 @@
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
-from flask import jsonify
 import re
 import time
 import scrapy
@@ -180,5 +179,5 @@ class handler(BaseHTTPRequestHandler):
             time.sleep(2)
             ln = len(details)
         #-----------------------------------{Spiders - End}------------------------------------------/
-        return jsonify(details)
+        return details
 #-----------------------------------{Web App - End}------------------------------------------------------------------------/
