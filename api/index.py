@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import re
+import json
 import time
 import scrapy
 from twisted.internet import defer
@@ -179,5 +180,5 @@ class handler(BaseHTTPRequestHandler):
             time.sleep(2)
             ln = len(details)
         #-----------------------------------{Spiders - End}------------------------------------------/
-        return details
+        return json.dumps(details)
 #-----------------------------------{Web App - End}------------------------------------------------------------------------/
